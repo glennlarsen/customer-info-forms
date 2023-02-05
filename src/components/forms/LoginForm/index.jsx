@@ -18,12 +18,14 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import IconButton from "@mui/material/IconButton";
 import Header from "components/Header";
 
+const mainColour = "#7f57f1";
+
 const FormTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "black",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#FF5F00",
+    borderBottomColor: mainColour,
   },
 });
 
