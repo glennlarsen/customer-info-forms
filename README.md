@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Customer info forms - Gather customer info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![screenshot](src/images/screenshot.png)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+I started this project after a request from my current job. They needed to gather customer information and input this in their system. They previously used a paper and pen method and did the inserting manually into the system. With this form website the customer can enter their details on a pad and the answer will appear on another device (PC, phone etc). The information can than easily be copy / pasted with a one click copy solution. The form inputs can be controlled, the language of the form can be switched and the answers can show in both uppercase or lowercase letters. Feel free to try out on the test user provided below.
 
-### `npm start`
+- Login page
+- Form page
+- Customer form
+- Answers Page
 
+Username: test
+Password: 123456
+
+## Built With
+
+- React.js
+- SCSS
+- Material UI
+- Axios
+- Strapi CMS
+- YUP
+- Spring Animations
+- Adobe XD
+
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+   `git clone https://github.com/glennlarsen/customer-info-forms.git`
+   Clones the repo to your choosen destination.
+
+2. Install the dependencies:
+   `npm install`
+   Install's all the required dependencies to run the project.
+
+### Running
+
+`npm run start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Test Login
 
-### `npm test`
+`User: test`\
+`Password: 123456`\
+Test user login to enter the Test side.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Live Site
 
-### `npm run build`
+The website is deployed on netlify by using `npm run build` and add the build folder to the deploy section on Netlify.
+[Link to live site](https://ubiquitous-bombolone-37e3ed.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributions to the project are very much appreaciated. To contribute please open a pull request so the code can be reviewed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contact
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[My LinkedIn Page](https://www.linkedin.com/in/glenn-larsen-288173242/)\
+[My Portfolio](https://glennportfolio.site)
