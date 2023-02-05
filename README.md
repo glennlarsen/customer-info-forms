@@ -12,7 +12,7 @@ I started this project after a request from my current job. They needed to gathe
 - Answers Page
 
 `Username: test`\
-`Password: 123456`\
+`Password: 123456`
 
 ## Built With
 
