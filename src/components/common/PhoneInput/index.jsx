@@ -7,12 +7,14 @@ import ErrorRoundedIcon from "@mui/icons-material/ErrorRounded";
 import { content } from "constants/DriverFormContent";
 import { LangContext } from "utils/LangContext";
 
+const mainColour = "#7f57f1";
+
 const MuiTelInputStyled = styled(MuiTelInput)({
   "& label.Mui-focused": {
     color: "black",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#FF5F00",
+    borderBottomColor: mainColour,
   },
 });
 
