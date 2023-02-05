@@ -1,6 +1,6 @@
 export const content = {
     en: {
-        heading: "Driver Information",
+        heading: "Customer Information",
         country: "Your Home Country",
         countryplaceholder: "Start typing..",
         street: "Street",
@@ -14,10 +14,10 @@ export const content = {
         reset: "Reset fields",
         emailerror: "Enter a valid email",
         phoneerror: "Phone number is to long",
-        confirmation: "Thank you! Enjoy your SIXT Experience."
+        confirmation: "Thank you! Enjoy your Experience."
     },
     es: {
-        heading: "Información del Conductor",
+        heading: "Información al cliente",
         country: "Tu país de origen",
         countryplaceholder: "empieza a escribir..",
         street: "Calle",
@@ -31,10 +31,10 @@ export const content = {
         reset: "Reestablecer campos",
         emailerror: "Introduzca un correo electrónico válido",
         phoneerror: "El número de teléfono es demasiado largo",
-        confirmation: "Gracias! Disfrute de su experiencia SIXT."
+        confirmation: "Gracias! Disfruta tu Experiencia."
     },
     fr: {
-        heading: "Informations sur le conducteur",
+        heading: "Informations client",
         country: "Votre pays d'origine",
         countryplaceholder: "commencer à écrire..",
         street: "Rue",
@@ -48,10 +48,10 @@ export const content = {
         reset: "Réinitialisation des champs",
         emailerror: "Entrer un email valide",
         phoneerror: "Le numéro de téléphone est trop long",
-        confirmation: "Merci! Profitez de votre expérience SIXT."
+        confirmation: "Merci! Profitez de votre expérience."
     },
     de: {
-        heading: "Fahrerinformationen",
+        heading: "Kundeninformation",
         country: "Ihr Heimatland",
         countryplaceholder: "beginne zu tippen..",
         street: "Straße",
@@ -65,10 +65,10 @@ export const content = {
         reset: "Felder zurücksetzen",
         emailerror: "Geben Sie eine gültige E-Mail-Adresse ein",
         phoneerror: "Telefonnummer ist zu lang",
-        confirmation: "Danke dir! Genießen Sie Ihr SIXT-Erlebnis."
+        confirmation: "Danke schön! Genießen Sie Ihre Erfahrung."
     },
     no: {
-        heading: "Førerinformasjon",
+        heading: "Kunde Informasjon",
         country: "Land",
         countryplaceholder: "Begynn å skrive..",
         street: "Gate",
@@ -82,6 +82,6 @@ export const content = {
         reset: "Reset felter",
         emailerror: "Skriv inn en gyldig epost",
         phoneerror: "Telefon nummer er for langt",
-        confirmation: "Takk skal du ha! Nyt SIXT-opplevelsen din."
+        confirmation: "Takk skal du ha! Nyt opplevelsen."
     }
 }

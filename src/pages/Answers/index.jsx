@@ -10,6 +10,11 @@ import AnswersForm2 from "components/forms/AnswersForm2";
 import AnswersForm3 from "components/forms/AnswersForm3";
 import { ANSWERS } from "constants/staticInfo";
 import FormTitle from "components/FormTitle";
+import {
+  FLESLAND_1,
+  FLESLAND_2,
+  FLESLAND_3,
+} from "constants/staticInfo";
 
 function Answers() {
   const { formName } = useParams();
@@ -32,9 +37,9 @@ function Answers() {
         description="Showing answers that the client provides to the form"
       />
       <Layout backPage={`form/${formName}`} info={FormTitle(formName)}>
-        {formName === "flesland1" && <AnswersForm title={ANSWERS} />}
-        {formName === "flesland2" && <AnswersForm2 title={ANSWERS} />}
-        {formName === "flesland3" && <AnswersForm3 title={ANSWERS} />}
+        {formName === FLESLAND_1 && <AnswersForm title={ANSWERS} />}
+        {formName === FLESLAND_2 && <AnswersForm2 title={ANSWERS} />}
+        {formName === FLESLAND_3 && <AnswersForm3 title={ANSWERS} />}
       </Layout>
     </Container>
   );

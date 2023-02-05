@@ -4,7 +4,7 @@ const Head = ({ page, description }) => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Sixt Driver Info | {page}</title>
+      <title>Customer Info | {page}</title>
       <link rel="canonical" href="" />
       <meta name="description" content={description} />
     </Helmet>

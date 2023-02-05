@@ -30,7 +30,7 @@ function LiveForm() {
     <Container>
       <Head
         page="Liveform"
-        description="Driver information form for clients to fill"
+        description="Customer information form for clients to fill"
       />
       <Layout info={FormTitle(formName)} showSideBar="none">
         <LanguageSelector />

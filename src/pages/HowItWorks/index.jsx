@@ -9,7 +9,7 @@ function HowItWorks() {
     <Container>
       <Head
         page="How it Works?"
-        description="This is how SIXT Driver info forms work. Follow the instructions here."
+        description="This is how Customer info forms work. Follow the instructions here."
       />
       <Layout showHowItWorks="none" info={DRIVER_INFO_FORMS}>
         <HowToDesciption title="How it Works?" />

@@ -2,6 +2,11 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Header from "components/Header";
+import {
+  FLESLAND_1,
+  FLESLAND_2,
+  FLESLAND_3,
+} from "constants/staticInfo";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -10,24 +15,24 @@ function FormDetails({ title }) {
   const { formName } = useParams();
 
   const onClickLiveForm = () => {
-    if (formName === "flesland1") {
-      navigate("/liveForm/flesland1");
-    } else if (formName === "flesland2") {
-      navigate("/liveForm/flesland2");
-    } else if (formName === "flesland3") {
-      navigate("/liveForm/flesland3");
+    if (formName === FLESLAND_1) {
+      navigate(`/liveForm/${FLESLAND_1}`);
+    } else if (formName === FLESLAND_2) {
+      navigate(`/liveForm/${FLESLAND_2}`);
+    } else if (formName === FLESLAND_3) {
+      navigate(`/liveForm/${FLESLAND_3}`);
     } else if (!formName) {
       navigate("/forms");
     }
   };
 
   const onClickAnswers = () => {
-    if (formName === "flesland1") {
-      navigate("/answers/flesland1");
-    } else if (formName === "flesland2") {
-      navigate("/answers/flesland2");
-    } else if (formName === "flesland3") {
-      navigate("/answers/flesland3");
+    if (formName === FLESLAND_1) {
+      navigate(`/answers/${FLESLAND_1}`);
+    } else if (formName === FLESLAND_2) {
+      navigate(`/answers/${FLESLAND_2}`);
+    } else if (formName === FLESLAND_3) {
+      navigate(`/answers/${FLESLAND_3}`);
     } else if (!formName) {
       navigate("/forms");
     }

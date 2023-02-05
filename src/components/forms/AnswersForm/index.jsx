@@ -32,7 +32,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FF5F00",
+      main: "#7f57f1",
       darker: "#053e85",
     },
     neutral: {
@@ -47,7 +47,7 @@ const FormTextField = styled(TextField)({
     color: "black",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#FF5F00",
+    borderBottomColor: "#7f57f1",
   },
 });
 
@@ -144,7 +144,7 @@ function AnswersForm({ title }) {
 
   const confirmDelete = (id) => {
     confirmAlert({
-      title: "Delete Driver Info",
+      title: "Delete Customer Info",
       message: "Are you sure?",
       buttons: [
         {

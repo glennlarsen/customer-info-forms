@@ -1,6 +1,6 @@
 {
-  "short_name": "Driver Info Forms",
-  "name": "Driver Info Forms",
+  "short_name": "Customer Info Forms",
+  "name": "Customer Info Forms",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-192x192.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-512x512.png",
+      "src": "logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

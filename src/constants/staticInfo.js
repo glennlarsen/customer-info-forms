@@ -1,10 +1,10 @@
-export const DRIVER_INFO_FORMS = "Driver Info Forms";
+export const DRIVER_INFO_FORMS = "Customer Info Forms";
 export const ANSWERS = "Answers";
-export const FLESLAND_1 = "flesland1";
-export const FLESLAND_2 = "flesland2";
-export const FLESLAND_3 = "flesland3";
+export const FLESLAND_1 = "myform1";
+export const FLESLAND_2 = "myform2";
+export const FLESLAND_3 = "myform3";
 export const NO_ANSWERS = "No Answers Yet. Find a customer that can fill your Live Form! Click Refresh if the result don't show automatically.";
-export const FLESLAND_1_TITLE = "Flesland 1"
-export const FLESLAND_2_TITLE = "Flesland 2"
-export const FLESLAND_3_TITLE = "Flesland 3"
+export const FLESLAND_1_TITLE = "My Form 1"
+export const FLESLAND_2_TITLE = "My Form 2"
+export const FLESLAND_3_TITLE = "My Form 3"
 export const UKNOWN_FORM = "Uknown Form";

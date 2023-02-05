@@ -24,11 +24,11 @@ function Login() {
     <Container>
       <Head
         page="Login"
-        description="Login to start using Sixt Driver info Forms"
+        description="Login to start using Customer info Forms"
       />
-      <Layout info="Driver Info Forms" showSideBar="none">
+      <Layout info={DRIVER_INFO_FORMS} showSideBar="none">
         <Mobile>
-          <Logo info="Driver Info Forms" />
+          <Logo info={DRIVER_INFO_FORMS} />
         </Mobile>
         <LoginForm title="Login" info={DRIVER_INFO_FORMS} />
       </Layout>

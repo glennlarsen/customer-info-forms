@@ -14,6 +14,9 @@ import Logo from "components/Logo";
 import { TabletAndDesktop } from "../ScreenViewSizes";
 import { Mobile } from "../ScreenViewSizes";
 
+//Menu item color
+const mainColour = "#7f57f1";
+
 const SideBarMenu = ({
   info,
   showSideBar,
@@ -34,7 +37,7 @@ const SideBarMenu = ({
         <List style={{ display: showSideBar }}>
           <ListItem disablePadding>
             <ListItemButton component={NavLink} to="/forms">
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<FormatAlignLeftIcon />}
               </ListItemIcon>
               <ListItemText primary="Forms" />
@@ -42,7 +45,7 @@ const SideBarMenu = ({
           </ListItem>
           <ListItem disablePadding style={{ display: showHowItWorks }}>
             <ListItemButton component={NavLink} to="/howitworks">
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<QuizIcon />}
               </ListItemIcon>
               <ListItemText primary="How it works" />
@@ -50,7 +53,7 @@ const SideBarMenu = ({
           </ListItem>
           <ListItem disablePadding style={{ display: showBackButton }}>
             <ListItemButton onClick={goBack}>
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<ArrowBackIcon />}
               </ListItemIcon>
               <ListItemText primary="Go back" />
@@ -79,7 +82,7 @@ const SideBarMenu = ({
         <List style={{ display: showSideBar }}>
           <ListItem disablePadding>
             <ListItemButton component={NavLink} to="/forms" onClick={closeMenu}>
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<FormatAlignLeftIcon />}
               </ListItemIcon>
               <ListItemText primary="Forms" />
@@ -87,7 +90,7 @@ const SideBarMenu = ({
           </ListItem>
           <ListItem disablePadding style={{ display: showHowItWorks }}>
             <ListItemButton component={NavLink} to="/howitworks">
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<QuizIcon />}
               </ListItemIcon>
               <ListItemText primary="How it works" />
@@ -95,7 +98,7 @@ const SideBarMenu = ({
           </ListItem>
           <ListItem disablePadding style={{ display: showBackButton }}>
             <ListItemButton onClick={goBack}>
-              <ListItemIcon sx={{ color: "#FF5F00" }}>
+              <ListItemIcon sx={{ color: mainColour }}>
                 {<ArrowBackIcon />}
               </ListItemIcon>
               <ListItemText primary="Go back" />

@@ -6,7 +6,7 @@ const FormTextField = styled(TextField)({
       color: "black",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "#FF5F00",
+      borderBottomColor: "#7f57f1",
     },
   });
 

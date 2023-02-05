@@ -97,7 +97,7 @@ function DriverInformation3({ title, confirmation }) {
       <animated.div style={slide}>
         <div className="loaderContainer form-complete">
           <animated.div style={opacity}>
-            <DoneIcon sx={{ fontSize: 100, color: "#FF5F00" }} />
+            <DoneIcon sx={{ fontSize: 100, color: "#7f57f1" }} />
           </animated.div>
           {confirmation}
         </div>

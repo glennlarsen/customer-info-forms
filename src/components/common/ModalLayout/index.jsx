@@ -10,7 +10,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "#FF5F00",
+  bgcolor: "#7f57f1",
   color: "white",
   boxShadow: 24,
   p: 4,
@@ -31,7 +31,7 @@ const theme = createTheme({
         colorPrimary: {
           "&.Mui-checked": {
             // Controls checked color for the thumb
-            color: "#FF721E",
+            color: "#3a1d8c",
           },
         },
         track: {

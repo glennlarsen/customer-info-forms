@@ -144,7 +144,7 @@ function AnswersForm3({ title }) {
 
   const confirmDelete = (id) => {
     confirmAlert({
-      title: "Delete Driver Info",
+      title: "Delete Customer Info",
       message: "Are you sure?",
       buttons: [
         {

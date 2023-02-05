@@ -8,6 +8,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
+const mainColour = "#7f57f1";
+
 const LanguageSelector = (props) => {
   const [lang, setLang] = useContext(LangContext);
 
@@ -28,7 +30,7 @@ const LanguageSelector = (props) => {
           label="Language"
           onChange={handleChangeSelect}
           sx={{
-            ":after": { borderBottomColor: "#FF5F00" },
+            ":after": { borderBottomColor: mainColour },
           }}
         >
           <MenuItem value="en">
