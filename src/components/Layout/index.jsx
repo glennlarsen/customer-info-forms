@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { stack as Menu } from "react-burger-menu";
 import { confirmAlert } from "react-confirm-alert";
 import AuthContext from "utils/AuthContext";
+import burgerIcon from "images/burger-icon.png";
 
 import Header from "components/Header";
 import SideBarMenu from "components/common/SideBarMenu";
@@ -58,6 +59,7 @@ function Layout({
     <div className="main-layout">
       {showSideBar === "none" ? null : (
         <Menu
+          customBurgerIcon={<img src={burgerIcon} />}
           width={310}
           left
           isOpen={menuState}
