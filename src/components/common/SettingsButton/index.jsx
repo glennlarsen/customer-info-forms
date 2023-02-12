@@ -6,7 +6,7 @@ const fabStyles = {
   "&.MuiFab-root": {
     background: "#191919",
     color: "white",
-    position: "absolute",
+    position: "fixed",
     bottom: 20,
     right: 20,
   },
@@ -15,7 +15,7 @@ const fabStyles = {
   },
 };
 
-  //Tablet and desktop View
+//Tablet and desktop View only
 function SettingsButton({ handleSettings }) {
   return (
     <TabletAndDesktop>
