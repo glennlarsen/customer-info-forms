@@ -66,11 +66,11 @@ function AnswersForm({ title }) {
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
   const [upperCase, setUpperCase] = useContext(SettingsContext);
-  let timer;
 
   useEffect(() => {
     //Refresh page every 10 seconds to get new form data if no answers are received//
-    if (answers.length > 0) {
+    if (answers.length < 1) {
+      const timer = setTimeout(() => refreshPage(), 10000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -187,7 +187,6 @@ function AnswersForm({ title }) {
   }
 
   if (answers.length < 1) {
-    timer = setTimeout(() => refreshPage(), 10000);
     return (
       <ThemeProvider theme={theme}>
         <Box className="answers-form">
