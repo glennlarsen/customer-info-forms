@@ -1,10 +1,14 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 30px;
-  height: 25px;
+  width: 40px;
+  height: 35px;
   left: 30px;
   top: 23px;
+  
+  & > * {
+    box-shadow: none;
+  }
 
   @media screen and (min-width: 600px) {
     display: none;

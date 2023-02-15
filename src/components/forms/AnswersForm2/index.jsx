@@ -66,14 +66,6 @@ function AnswersForm2({ title }) {
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
   const [upperCase, setUpperCase] = useContext(SettingsContext);
-  let timer;
-
-  useEffect(() => {
-    //Refresh page every 10 seconds to get new form data if no answers are received//
-    if (answers.length > 0) {
-      return () => clearTimeout(timer);
-    }
-  }, []);
 
   const refreshPage = () => {
     navigate(0);
@@ -142,6 +134,13 @@ function AnswersForm2({ title }) {
   const url = BASE_URL + DRIVERFORM2;
   const { answers, loading, error } = useApi(url);
 
+  useEffect(() => {
+    //Refresh page every 10 seconds to get new form data if no answers are received//
+    if (answers.length > 0) return;
+    const timer = setTimeout(() => refreshPage(), 10000);
+    return () => clearTimeout(timer);
+  }, [answers]);
+
   const confirmDelete = (id) => {
     confirmAlert({
       title: "Delete Customer Info",
@@ -187,7 +186,6 @@ function AnswersForm2({ title }) {
   }
 
   if (answers.length < 1) {
-    timer = setTimeout(() => refreshPage(), 10000);
     return (
       <ThemeProvider theme={theme}>
         <Box className="answers-form">
