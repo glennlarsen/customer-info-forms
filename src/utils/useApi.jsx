@@ -25,7 +25,8 @@ function useApi(url) {
   return {
     answers,
     loading,
-    error
+    error,
+    setAnswers,
   };
 }
 

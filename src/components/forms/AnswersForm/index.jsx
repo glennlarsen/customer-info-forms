@@ -25,6 +25,7 @@ import { NO_ANSWERS } from "constants/staticInfo";
 import SettingsButton from "components/common/SettingsButton";
 import AnswersSettingsModal from "components/common/AnswersSettingsModal";
 import { SettingsContext } from "utils/SettingsContext";
+import { io } from "socket.io-client";
 
 const theme = createTheme({
   status: {
@@ -52,6 +53,7 @@ const FormTextField = styled(TextField)({
 });
 
 function AnswersForm({ title }) {
+  const url = BASE_URL + DRIVERFORM1;
   const navigate = useNavigate();
   const [copySuccess, setCopySuccess] = useState("");
   const [deleted, setDeleted] = useState(false);
@@ -66,6 +68,11 @@ function AnswersForm({ title }) {
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
   const [upperCase, setUpperCase] = useContext(SettingsContext);
+  const [chatMessage, setChatMessage] = useState("");
+  const socket = useRef();
+
+  console.log(socket);
+  console.log(chatMessage);
 
   const refreshPage = () => {
     navigate(0);
@@ -84,8 +91,6 @@ function AnswersForm({ title }) {
   function copyPhone(e) {
     phoneRef.current.select();
     document.execCommand("copy");
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess("Copied Phone Number!");
     setShow(true);
@@ -94,8 +99,6 @@ function AnswersForm({ title }) {
   function copyCity(e) {
     cityRef.current.select();
     document.execCommand("copy");
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess("Copied City!");
     setShow(true);
@@ -104,8 +107,6 @@ function AnswersForm({ title }) {
   function copyPostal(e) {
     postalRef.current.select();
     document.execCommand("copy");
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess("Copied Postal Code!");
     setShow(true);
@@ -114,8 +115,6 @@ function AnswersForm({ title }) {
   function copyStreet(e) {
     streetRef.current.select();
     document.execCommand("copy");
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess("Copied Street!");
     setShow(true);
@@ -124,22 +123,25 @@ function AnswersForm({ title }) {
   function copyCountry(e) {
     countryRef.current.select();
     document.execCommand("copy");
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
     setCopySuccess("Copied Country!");
     setShow(true);
   }
 
-  const url = BASE_URL + DRIVERFORM1;
-  const { answers, loading, error } = useApi(url);
+  const { answers, setAnswers, loading, error } = useApi(url);
 
   useEffect(() => {
-    //Refresh page every 10 seconds to get new form data if no answers are received//
-    if (answers.length > 0) return;
-    const timer = setTimeout(() => refreshPage(), 10000);
-    return () => clearTimeout(timer);
-  }, [answers]);
+    socket.current = io(`${BASE_URL}`);
+    socket.current?.emit('Answers', "test");
+    socket.current.on('chat message', (message) => {
+      console.log(message);
+      setChatMessage(message[1]);
+    });
+    return () => { socket.current?.disconnect(); };
+  }, []);
+
+
+
 
   const confirmDelete = (id) => {
     confirmAlert({
@@ -224,6 +226,16 @@ function AnswersForm({ title }) {
           const formatDate = (value, locale = "nb-NO") => {
             return new Date(value).toLocaleDateString(locale, options);
           };
+
+          //Delete all answers if last answer is more than 15 minutes old
+          const nowDate = new Date();
+          const publishTime = new Date(publishedAt);
+          const diffMilli = Math.abs(publishTime - nowDate);
+          const diffTime = Math.ceil(diffMilli / (1000 * 60));
+
+          if (answers && diffTime > 15) {
+            handleDelete(item.id);
+          }
 
           return (
             <ThemeProvider theme={theme} key={item.id}>

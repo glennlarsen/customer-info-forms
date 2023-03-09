@@ -21,6 +21,7 @@ import ScrollTo from "components/common/ScrollTo";
 import Header from "components/Header";
 import SettingsButton from "components/common/SettingsButton";
 import SettingsModal from "components/common/SettingsModal";
+import { useOnlineStatus } from "utils/useOnlineStatus";
 
 function DriverInformation2({ title, confirmation }) {
   const [submitted, setSubmitted] = useState(false);
@@ -36,6 +37,7 @@ function DriverInformation2({ title, confirmation }) {
     phone: true,
     email: true,
   });
+  const onlineStatus = useOnlineStatus();
 
   const {
     register,
@@ -129,6 +131,16 @@ function DriverInformation2({ title, confirmation }) {
         variant="error"
         title="Error"
         message="An error occured, Please try again later"
+      />
+    );
+  }
+
+  if (!onlineStatus) {
+    return (
+      <AlertMessage
+        variant="error"
+        title="Offline"
+        message="Your device is Offline, Please connect to the internet to continue."
       />
     );
   }
