@@ -52,6 +52,7 @@ const DriverInformation = ({ title, confirmation }) => {
 
   const onReset = () => {
     reset();
+    unregister();
     setDefaultCallingCode("NO");
   };
 
@@ -92,6 +93,7 @@ const DriverInformation = ({ title, confirmation }) => {
   });
 
   const handleSettings = () => {
+    trigger();
     openModal();
   };
 
