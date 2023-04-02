@@ -4,12 +4,15 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import ModalLayout from "../ModalLayout";
 
-function SettingsModal({ open, handleClose, settings, setSettings }) {
+function SettingsModal({ open, handleClose, settings, setSettings, unregister, errors }) {
   const handleChange = (event) => {
     setSettings({
       ...settings,
       [event.target.name]: event.target.checked,
     });
+    if(!event.target.checked && errors[event.target.name]) {
+      unregister([event.target.name]);
+    }
   };
 
   return (
@@ -31,9 +34,9 @@ function SettingsModal({ open, handleClose, settings, setSettings }) {
         <FormControlLabel
           control={
             <Switch
-              checked={settings.phone}
+              checked={settings.tel}
               onChange={handleChange}
-              name="phone"
+              name="tel"
             />
           }
           label="Phone"
