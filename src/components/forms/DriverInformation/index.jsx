@@ -43,7 +43,9 @@ const DriverInformation = ({ title, confirmation }) => {
     register,
     unregister,
     handleSubmit,
+    trigger,
     reset,
+    setValue,
     control,
     formState: { errors },
   } = useForm({
@@ -54,6 +56,7 @@ const DriverInformation = ({ title, confirmation }) => {
     reset();
     unregister();
     setDefaultCallingCode("NO");
+    setValue("tel", "");
   };
 
   // Function that will run when form is submitted

@@ -43,7 +43,9 @@ function DriverInformation3({ title, confirmation }) {
     register,
     unregister,
     handleSubmit,
+    trigger,
     reset,
+    setValue,
     control,
     formState: { errors },
   } = useForm({
@@ -54,6 +56,7 @@ function DriverInformation3({ title, confirmation }) {
     reset();
     unregister();
     setDefaultCallingCode("NO");
+    setValue("tel", "");
   };
 
   // Function that will run when form is submitted
@@ -93,6 +96,7 @@ function DriverInformation3({ title, confirmation }) {
   });
 
   const handleSettings = () => {
+    trigger();
     openModal();
   };
 
