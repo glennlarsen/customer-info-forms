@@ -67,6 +67,8 @@ const LoginForm = ({ title }) => {
     }
   }
 
+  const demoLogin = <span>username: <strong>demo</strong> / Password: <strong>demo1234</strong></span>;
+
   return (
     <Box
       component="form"
@@ -76,6 +78,7 @@ const LoginForm = ({ title }) => {
       className="login-form"
     >
       <Header title={title} />
+      <AlertMessage variant="info" title="Demo Login" message={demoLogin} />
       {loginError && (
         <AlertMessage variant="error" title="Error" message={loginError} />
       )}

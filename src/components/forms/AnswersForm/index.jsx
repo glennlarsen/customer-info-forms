@@ -140,9 +140,6 @@ function AnswersForm({ title }) {
     return () => { socket.current?.disconnect(); };
   }, []);
 
-
-
-
   const confirmDelete = (id) => {
     confirmAlert({
       title: "Delete Customer Info",
@@ -230,12 +227,12 @@ function AnswersForm({ title }) {
           //Delete all answers if last answer is more than 15 minutes old
           const nowDate = new Date();
           const publishTime = new Date(publishedAt);
-          const diffMilli = Math.abs(publishTime - nowDate);
-          const diffTime = Math.ceil(diffMilli / (1000 * 60));
 
-          if (answers && diffTime > 15) {
+          if (answers && nowDate - publishTime > 15 * 60 * 1000) {
+            // Content is more than 15 minutes old, delete it
             handleDelete(item.id);
           }
+
 
           return (
             <ThemeProvider theme={theme} key={item.id}>
